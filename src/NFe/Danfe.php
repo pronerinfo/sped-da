@@ -2016,16 +2016,16 @@ class Danfe extends DaCommon
 
                 return ($y + $h - 3);
             }
-            if ($textoFatura !== "" && $this->exibirTextoFatura) {
-                $myH = 6;
-                $myW = $this->wPrint;
-                if ($this->orientacao == 'L') {
-                    $myW -= $this->wCanhoto;
-                }
-                $aFont = ['font' => $this->fontePadrao, 'size' => 8, 'style' => ''];
-                $this->pdf->textBox($x, $y, $myW, $myH, $textoFatura, $aFont, 'C', 'L', 1, '');
-                $y += $myH + 1;
-            }
+            // if ($textoFatura !== "" && $this->exibirTextoFatura) {
+            //     $myH = 6;
+            //     $myW = $this->wPrint;
+            //     if ($this->orientacao == 'L') {
+            //         $myW -= $this->wCanhoto;
+            //     }
+            //     $aFont = ['font' => $this->fontePadrao, 'size' => 8, 'style' => ''];
+            //     $this->pdf->textBox($x, $y, $myW, $myH, $textoFatura, $aFont, 'C', 'L', 1, '');
+            //     $y += $myH + 1;
+            // }
             if ($this->orientacao == 'P') {
                 $w = round($this->wPrint / 7.018, 0) - 1;
             } else {
