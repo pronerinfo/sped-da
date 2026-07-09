@@ -100,7 +100,7 @@ class Dom extends DOMDocument
         $node = $this->getElementsByTagName($nodeName)->item(0);
         if (! empty($node)) {
             $chaveId = $node->getAttribute("Id");
-            $chave =  preg_replace('/[^0-9]/', '', $chaveId);
+            $chave =  strtoupper(preg_replace('/[^A-Za-z0-9]/', '', preg_replace('/^[A-Za-z]+/', '', $chaveId)));
             return $chave;
         }
         return '';
